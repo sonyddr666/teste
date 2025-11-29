@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #4682b4;
+        }
+        p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à Página 6</h1>
+    <p>Você será redirecionado para outra página aleatória em instantes...</p>
+
+    <script>
+        function redirectToRandomPage() {
+            const totalPages = 10;
+            const currentPageNumber = 6; // Esta é a página 6
+            let nextPageNumber;
+            do {
+                nextPageNumber = Math.floor(Math.random() * totalPages) + 1;
+            } while (nextPageNumber === currentPageNumber); // Garante que não redireciona para a mesma página imediatamente (opcional)
+
+            window.location.href = `page${nextPageNumber}.html`;
+        }
+        
+        window.onload = redirectToRandomPage;
+    </script>
+</body>
+</html>
